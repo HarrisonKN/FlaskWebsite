@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import 'bootstrap_wtf.html' as wtf %}
+
+{% from nba_api.stats.endpoints import playercareerstats %}
+{% block content %}
+
+    <h1> HERE IS THE NBA PAGE</h1>
+
+    <p> {% career = playercareerstats.PlayerCareerStats(player_id='203999') % }</p>
+
+{% endblock %}

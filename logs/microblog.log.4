@@ -1,0 +1,117 @@
+2024-06-19 07:44:42,983 ERROR: Exception on /register [GET] [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py:838]
+Traceback (most recent call last):
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\routes.py", line 81, in register
+    return render_template('register.html', title='Register', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\register.html", line 2, in top-level template code
+    {% import 'bootstrap_wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\bootstrap_wtf.html", line 6, in template
+    {%- endfor %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endfor'. Jinja was looking for the following tags: 'endmacro'. The innermost block that needs to be closed is 'macro'.
+2024-06-19 07:44:49,427 ERROR: Exception on /register [GET] [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py:838]
+Traceback (most recent call last):
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\routes.py", line 81, in register
+    return render_template('register.html', title='Register', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\register.html", line 2, in top-level template code
+    {% import 'bootstrap_wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\bootstrap_wtf.html", line 6, in template
+    {%- endfor %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endfor'. Jinja was looking for the following tags: 'endmacro'. The innermost block that needs to be closed is 'macro'.
+2024-06-19 07:47:21,450 INFO: Microblog Startup [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\__init__.py:49]
+2024-06-19 07:47:56,984 INFO: Microblog Startup [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\__init__.py:49]
+2024-06-19 07:56:48,558 INFO: Microblog Startup [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\__init__.py:49]
+2024-06-20 12:47:33,890 INFO: Microblog Startup [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\__init__.py:49]
+2024-06-20 12:51:21,616 INFO: Microblog Startup [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\__init__.py:49]
+2024-06-20 12:51:23,550 ERROR: Exception on / [GET] [in C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py:838]
+Traceback (most recent call last):
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\routes.py", line 41, in index
+    return render_template('index.html', title='Home',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\base.html", line 58, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\app\templates\index.html", line 6, in block 'content'
+    {{ wtf.quick_form(form) }}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hazab\Desktop\VSCode Projects\FlaskTutorial\venv\Lib\site-packages\jinja2\environment.py", line 487, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'wtf' is undefined
