@@ -1,0 +1,164 @@
+body{
+    background-color: #18181b;
+}
+p{
+    color: #fff;
+}
+
+
+
+
+.Navigation ul{
+    background-color: #2d2d33;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.Navigation li{
+    float: right; /*Flips list order in reverse */
+}
+.Navigation li a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: x-large;
+}
+.Navigation li a:hover{
+    background-color:steelblue ;
+}
+
+
+
+
+.TaskBar{
+    max-width: 150px;
+    height: 100%;
+    background-color: #2d2d33;
+    position: fixed;
+}
+.TaskBar ul{
+    background-color: #2d2d33;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 150px;
+}
+.TaskBar li a{
+    display: block;
+    color: azure;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: x-large;
+}
+.TaskBar li a:hover{
+    background-color: steelblue;
+}
+
+.TaskBar button{
+    background-color: #2d2d33;
+    list-style-type: none;
+    margin:10px;
+    padding:5px;
+    overflow: hidden;
+    display: block;
+    color: #fff;
+    font-size: x-large;
+}
+.tablink{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+.tabcontent{
+    display: none;
+    margin-left: 150px;
+    padding: 20px;
+    color: #fff;
+}
+
+
+
+
+.NotePadArea{
+    height: 300px;
+    width: 300px;
+}
+.NotePadItems{
+    display: flex;
+    align-items: flex-start;
+}
+#NotePad button{
+    margin: 5px;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    width: 300px;
+    height: 100px;
+    padding: 5px;
+    transition: all 0.1s;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+#NotePad button span{
+    cursor: pointer;
+    position: relative;
+    transition: 0.1s;
+}
+#NotePad button span:after{
+    content: '\00bb';
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition:0.1s
+}
+#NotePad button:hover{
+    background-color: #d84619;
+}
+#NotePad button:hover span{
+    padding-right: 25px;
+}
+#Notepad button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+#NotePad button:active{
+    background-color: #ba3b15;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#options{
+    margin-bottom: 10px;
+}
+
+
+
+
+.DiaryGrid{
+    background-color: antiquewhite;
+    height: 800px
+}
+.DiaryGrid h3{
+    font-size: 600%;
+    color: #18181b;
+    border-style: solid;
+}
+.DiaryGrid h1{
+    color: #18181b;
+    margin-top: -80px;
+}
+
+.py_script{
+    text-align: center;
+}

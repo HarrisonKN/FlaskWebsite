@@ -203,3 +203,11 @@ def reset_password(token):
 @login_required
 def nba():
     return render_template('nba.html', title='NBA')
+
+@app.route('/randomtesting', methods=['GET','POST'])
+def randomtesting():
+    return render_template('randomtesting.html', title='RandTest')
+
+@app.route('/test_features', methods=['GET','POST'])
+def test_features():
+    return render_template('test_features.html', title='TestFeatures')

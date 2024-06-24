@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block content %}
+<script>
+    function openTab(tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.classList.add("active");
+    }
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="C:/Users/hazab/Desktop/CodeProjects/GitHubRepos/FlaskApp_GitHub/FlaskWebsite/app/templates/style.css">
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.5.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.5.1/core.js"></script>
+    <H1> Welcome</H1>
+    <p>This will be a page where we test out different features and try and get them to work before putting on main page</p>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('NotePad')">NotePad</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('Diary')">Diary</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('Calendar')">Calendar</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('Budgeting')">Budgeting</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('Banking')">Banking</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('YoutubeDownloader')">Downloader</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="tablink" onclick="openTab('PirateTranslator')">Pirate Translator</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="NotePad" class="tabcontent">
+        <h3> NotePad</h3>
+        <p> This area will be designed to act as a note pad, or an area that has lots of sticky notes to keep notes,
+            <br>Colour code the notes
+        </p>
+        <div class="NotePadItems">
+            <div id="options">
+                <label for="color">Color:</label>
+                <select id="color" onchange="addNote(this.value)">
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <label for="fontsize">Font Size</label>
+                <select id="fontsize" onchange="addNote(this.value)">
+                    <option value="12px">12px</option>
+                    <option value="30px">30px</option>
+                    <option value="64px">64px</option>
+                </select>
+            </div>
+            <button id="NotePadButton" onclick="addNote()"><span>Add New Note</span></button>
+        </div>
+    </div>
+    <div id="Diary" class="tabcontent" style="display: none;">
+        <h3> Diary</h3>
+        <p> This area will be designed like a diary, in that it will have todays date (or other chosen dates) with an area to write anything, could make it look like youre writing in a diary book.
+            might be very similar to calender, maybe add links between the 2?
+        </p>
+        <div class="DiaryGrid" >
+            <h3> Daily Planner</h3>
+            
+            <tr class="DateLine">
+                <th>DATE</th>
+                <th></th>
+            </tr>
+
+        </div>
+    </div>
+    <div id="Calendar" class="tabcontent" style="display: none;">
+        <h3> Calendar</h3>
+        <p> This area will be a calender, it will be aimed to work similary to google calendar</p>
+        <iframe src="https://calendar.google.com/calendar/embed?src=e1312c25bcbd24860721eefb1ccd1514ba0af3563976f2401d277e28fc97c3f7%40group.calendar.google.com&ctz=Australia%2FSydney" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="Budgeting" class="tabcontent" style="display: none;">
+        <h3> Budgeting</h3>
+        <p> This area will become a budgeting area, this will allow you to change daily,weekly,fortnightly,monthly budgeting.
+            Should include features and feels similar to excel
+            Needs to have a visual aspect 
+        </p>
+    </div>
+    <div id="Banking" class="tabcontent" style="display: none;">
+        <h3> Banking</h3>
+        <p> This are will be a banking area, this area will be linked to budgeting and could be used to link to your bank</p>
+    </div>
+
+
+
+
+{% endblock %}
